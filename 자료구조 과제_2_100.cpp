@@ -18,23 +18,21 @@ int main() {
 	
 	srand(time(NULL));
 	int i;
-	int one[1];
-	for(i = 0; i < 1; i++){
-		one[i] = i+1;
+	int hundred[100];
+	for(i = 0; i < 100; i++){
+		hundred[i] = i+1;
 	}	
 		
-	unsigned int key = randr(1, 1);
-	
+	unsigned int key = randr(1, 100);
 	clock_t startime = (double)clock();
 	
-	for(i = 0; i < 1; i++){
+	for(i = 0; i < 100; i++){
 		do_sleep(1);
-		if(key == one[i]){
+		if(key == hundred[i]){
 			break;
 		}
 	}
 	
 	printf("%0.4fs\n", (float)(clock() - startime) /CLOCKS_PER_SEC);
-	
 	return 0;
 }

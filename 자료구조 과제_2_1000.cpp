@@ -18,18 +18,18 @@ int main() {
 	
 	srand(time(NULL));
 	int i;
-	int one[1];
-	for(i = 0; i < 1; i++){
-		one[i] = i+1;
+	int thousand[1000];
+	for(i = 0; i < 1000; i++){
+		thousand[i] = i+1;
 	}	
 		
-	unsigned int key = randr(1, 1);
+	unsigned int key = randr(1, 1000);
 	
 	clock_t startime = (double)clock();
 	
-	for(i = 0; i < 1; i++){
+	for(i = 0; i < 1000; i++){
 		do_sleep(1);
-		if(key == one[i]){
+		if(key == thousand[i]){
 			break;
 		}
 	}
